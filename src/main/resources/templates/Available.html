@@ -46,6 +46,7 @@
 						<th scope="col">Id</th>
 						<th scope="col">Company Name</th>
 						<th scope="col">Job Description</th>
+						<th scope="col">Link</th>
 						<th scope="col">Deadline</th>
 						<th scope="col" th:action="@{/update}">Update</th>
 						<th scope="col">Delete</th>
@@ -56,6 +57,7 @@
 						<td th:text="${j.id}"/>
 						<td th:text="${j.companyName}"/>
 						<td th:text="${j.jobDesc}"/>
+						<td><a th:href="${j.link}" class="btn btn-primary btn-md" role="button">Apply</a></td>
 						<td th:text="${j.deadline}"/> 
 						<td><a th:href="@{'/update/'+${j.id}}" class="btn btn-success btn-md" role="button">Edit</a></td>
 						<td><a th:href="@{'/delete/'+${j.id}}" class="btn btn-danger btn-md" role="button">Delete</a></td>

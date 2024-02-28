@@ -42,21 +42,26 @@
 						th:value="${job.id}" th:field="*{id}">
 				</div>
 				<div class="mb-3">
-					<label for="exampleFormControlTextarea1" class="form-label">Company
+					<label for="exampleFormControlTextarea2" class="form-label">Company
 						Name</label>
-					<textarea class="form-control" id="exampleFormControlTextarea1"
-						rows="1" th:field="*{companyName}"></textarea>
+					<textarea class="form-control" id="exampleFormControlTextarea2"
+						rows="1" th:value="${job.companyName}" th:field="*{companyName}"></textarea>
 				</div>
 				<div class="mb-3">
-					<label for="exampleFormControlTextarea1" class="form-label">Job
+					<label for="exampleFormControlTextarea3" class="form-label">Job
 						Description</label>
-					<textarea class="form-control" id="exampleFormControlTextarea1"
-						rows="2" th:field="*{jobDesc}"></textarea>
+					<textarea class="form-control" id="exampleFormControlTextarea3"
+						rows="2" th:value=${job.jobDesc} th:field="*{jobDesc}"></textarea>
 				</div>
 				<div class="mb-3">
-					<label for="exampleFormControlTextarea1" class="form-label">Deadline</label>
-					<textarea class="form-control" id="exampleFormControlTextarea1"
-						rows="1" th:field="*{deadline}"></textarea>
+					<label for="exampleFormControlTextarea4" class="form-label">Link</label>
+					<textarea class="form-control" id="exampleFormControlTextarea4"
+						rows="1" th:value="${job.link}" th:field="*{link}"></textarea>
+				</div>
+				<div class="mb-3">
+					<label for="exampleFormControlTextarea5" class="form-label">Deadline</label>
+					<textarea class="form-control" id="exampleFormControlTextarea5"
+						rows="1" th:value="${job.deadline}" th:field="*{deadline}"></textarea>
 				</div>
 				<center>
 					<button type="submit" class="btn btn-primary">Submit</button>

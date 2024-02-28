@@ -15,18 +15,14 @@ public class JobImplements implements JobServices{
 	
 	@Override
 	public Jobs createJobs(Jobs user) {
-		// TODO Auto-generated method stub
 		return jobRepo.save(user);
 	}
 	public List<Jobs> getJobs() {
-		// TODO Auto-generated method stub
 		return jobRepo.findAll();
 	}
-	@Override
-	public Jobs getById(int id) {
-		// TODO Auto-generated method stub		
-		return jobRepo.findById(id).get();
-	}
+//	public Jobs getById(int id) {
+//		return jobRepo.findById(id).get();
+//	}
 	@Override
 	public Jobs updateJobs(Jobs jobs, int id) {
 		// TODO Auto-generated method stub
@@ -36,6 +32,7 @@ public class JobImplements implements JobServices{
 			updatedJob.setCompanyName(jobs.getCompanyName());
 			updatedJob.setJobDesc(jobs.getJobDesc());
 			updatedJob.setDeadline(jobs.getDeadline());
+			updatedJob.setLink(jobs.getLink());
 			return jobRepo.save(updatedJob);
 		}
 		else return updatedJob;

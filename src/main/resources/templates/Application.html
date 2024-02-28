@@ -38,17 +38,19 @@
 						<th scope="col">Id</th>
 						<th scope="col">Company Name</th>
 						<th scope="col">Job Description</th>
+						<th scope="col">Link</th>
 						<th scope="col">Deadline</th>
+						
 					</tr>
 				</thead>
 				<tbody>
 					<tr th:each="j:${jobs}">
-						<td th:text="${j.id}" />
-						<td th:text="${j.companyName}" />
-						<td th:text="${j.jobDesc}" />
-						<td th:text="${j.deadline}" />
+						<td th:text="${j.id}"/>
+						<td th:text="${j.companyName}"/>
+						<td th:text="${j.jobDesc}"/>
+						<td><a th:href="${j.link}" class="btn btn-primary btn-md" role="button">Apply</a></td>
+						<td th:text="${j.deadline}"/>								
 					</tr>
-
 				</tbody>
 			</table>
 		</div>
